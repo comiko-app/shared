@@ -8,19 +8,31 @@ part of comiko_shared.models.artist;
 
 Artist _$ArtistFromJson(Map<String, dynamic> json) => new Artist(
     name: json['name'] as String,
-    image: json['image'] as String,
-    biography: json['biography'] as String,
-    styles: json['styles'] as String);
+    bio: json['bio'] as String,
+    imageUrl: json['imgUrl'] as String,
+    pageUrl: json['pageUrl'] as String,
+    website: json['website'] as String,
+    facebook: json['facebook'] as String,
+    twitter: json['twitter'] as String,
+    youtube: json['youtube'] as String);
 
 abstract class _$ArtistSerializerMixin {
   String get name;
-  String get image;
-  String get biography;
-  String get styles;
+  String get bio;
+  String get imageUrl;
+  String get pageUrl;
+  String get website;
+  String get facebook;
+  String get twitter;
+  String get youtube;
   Map<String, dynamic> toJson() => <String, dynamic>{
         'name': name,
-        'image': image,
-        'biography': biography,
-        'styles': styles
+        'bio': bio,
+        'imgUrl': imageUrl,
+        'pageUrl': pageUrl,
+        'website': website,
+        'facebook': facebook,
+        'twitter': twitter,
+        'youtube': youtube
       };
 }
