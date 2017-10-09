@@ -1,5 +1,7 @@
 # shared
 
+[![Build Status](https://travis-ci.org/comiko-app/shared.svg?branch=master)](https://travis-ci.org/comiko-app/shared)
+
 A library for Dart developers. It is awesome.
 
 ## Usage
