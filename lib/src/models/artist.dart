@@ -2,6 +2,7 @@ library comiko_shared.models.artist;
 
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
+import 'package:comiko_shared/utils.dart';
 
 part 'artist.g.dart';
 
@@ -17,6 +18,16 @@ class Artist extends Object with _$ArtistSerializerMixin {
   String facebook;
   String twitter;
   String youtube;
+
+  String get twitterHandle => '@${twitter
+      .split('/')
+      .last}';
+
+  String get facebookHandle => getSiteName(facebook);
+
+  String get youtubeHandle => getSiteName(youtube);
+
+  String get websiteShort => getSiteName(website);
 
   Artist({
     @required this.name,
