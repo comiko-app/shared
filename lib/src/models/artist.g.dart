@@ -14,9 +14,11 @@ Artist _$ArtistFromJson(Map<String, dynamic> json) => new Artist(
     website: json['website'] as String,
     facebook: json['facebook'] as String,
     twitter: json['twitter'] as String,
-    youtube: json['youtube'] as String);
+    youtube: json['youtube'] as String,
+    id: json['id'] as String);
 
 abstract class _$ArtistSerializerMixin {
+  String get id;
   String get name;
   String get bio;
   String get imageUrl;
@@ -26,6 +28,7 @@ abstract class _$ArtistSerializerMixin {
   String get twitter;
   String get youtube;
   Map<String, dynamic> toJson() => <String, dynamic>{
+        'id': id,
         'name': name,
         'bio': bio,
         'imgUrl': imageUrl,

@@ -7,6 +7,7 @@ part 'artist.g.dart';
 
 @JsonSerializable()
 class Artist extends Object with _$ArtistSerializerMixin {
+  String id;
   String name;
   String bio;
   @JsonKey(name: 'imgUrl')
@@ -26,6 +27,7 @@ class Artist extends Object with _$ArtistSerializerMixin {
     this.facebook,
     this.twitter,
     this.youtube,
+    this.id,
   });
 
   factory Artist.fromJson(Map<String, dynamic> json) => _$ArtistFromJson(json);
