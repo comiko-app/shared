@@ -1,8 +1,8 @@
 library comiko_shared.models.artist;
 
+import 'package:comiko_shared/utils.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
-import 'package:comiko_shared/utils.dart';
 
 part 'artist.g.dart';
 
@@ -18,6 +18,7 @@ class Artist extends Object with _$ArtistSerializerMixin {
   String facebook;
   String twitter;
   String youtube;
+  bool deleted;
 
   String get twitterHandle => '@${twitter
       .split('/')
@@ -39,6 +40,7 @@ class Artist extends Object with _$ArtistSerializerMixin {
     this.twitter,
     this.youtube,
     this.id,
+    this.deleted,
   });
 
   factory Artist.fromJson(Map<String, dynamic> json) => _$ArtistFromJson(json);
