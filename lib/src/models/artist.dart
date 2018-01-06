@@ -20,9 +20,11 @@ class Artist extends Object with _$ArtistSerializerMixin {
   String youtube;
   bool deleted;
 
-  String get twitterHandle => '@${twitter
-      .split('/')
-      .last}';
+  String get twitterHandle => twitter != null
+      ? '@${twitter
+          .split('/')
+          .last}'
+      : null;
 
   String get facebookHandle => getSiteName(facebook);
 
