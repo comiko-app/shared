@@ -1,11 +1,12 @@
 import 'dart:convert';
+
 import 'package:test/test.dart';
 
 import 'package:comiko_shared/models.dart';
 
 main() {
   test('JSON deserialization works for event', () {
-    var json = """
+    var jsonContent = """
       {
         "id": 1,
         "name": "Eh lala..!",
@@ -19,7 +20,7 @@ main() {
         "styles": ""
       }
     """;
-    var jsonMap = JSON.decode(json);
+    var jsonMap = json.decode(jsonContent);
     var model = new Event.fromJson(jsonMap);
 
     expect(model.name, 'Eh lala..!');
