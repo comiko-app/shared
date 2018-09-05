@@ -3,7 +3,7 @@ description: Shared components for Comiko.
 version: 0.0.1
 
 environment:
-  sdk: ">=1.24.1 <2.1.0"
+  sdk: ">=2.0.0 <3.0.0"
 
 dependencies:
   json_annotation: "^1.1.0"
